@@ -1,12 +1,8 @@
 # portfolio
-portfolio hassan hanboly
-<<<<<<< HEAD
-=======
-
 This is a simple web project built using ** HTML, CSS, and JavaScript **.
 
 ## 📌 Project Description
-A basic web portfolio created for practicing front-end development
+A basic portfolio created for practicing front-end development
 and learning how to use ** Git ** and ** GitHub **.
 
 ## 🚀 Features
