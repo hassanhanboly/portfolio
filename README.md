@@ -17,8 +17,8 @@ portfolio/
 │── css
 │── js
 │── LICENSE
-│── index.html
-└── README.md
+│── README.md
+└── index.html
 
 assets/
 │── icons
