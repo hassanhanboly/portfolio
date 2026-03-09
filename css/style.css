@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding : 10px;
+    margin: 10px;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transition: 0.8s;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+/* ############################################################# */
+
+section{
+    padding: 100px 200px;
+}
+
+.card {
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+
+  /* Box Model */
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+
+  /* Typography */
+  font-size: 16px;
+  color: #333;
+
+  /* Visual */
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+  /* Effects */
+  transition: transform 0.3s ease;
+
+}
