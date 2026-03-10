@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  /* Layout */
-  /* Box Model */
-  /* Typography */
-  /* Visual */
-  /* Effects */
+/* Css propreties oreder 
+
+Layout --> display z-index position top right buttom left
+Box Model --> width height padding margin border border-raduis
+Typography --> font-family font-size font-weight line-height text-align
+Visual --> color background box-shadow opacity
+Effects --> transform transition animation */
+
+/* #################### General System  #################### */
 
 *{
     padding: 0;
@@ -15,16 +19,23 @@
 }
 
 .container {
-    max-width: 1100px; /* max display size: 0 to 1100px*/
-    margin-inline: auto; /* right + left only: center*/
-    padding-inline: 1rem; /* starting + ending only: gap*/
+    width:100%;
+    max-width:1100px;  /* max display size: 0 to 1100px*/
+    margin-inline:auto;  /* right + left only: center*/
+    padding-inline:1rem;  /* starting + ending only: gap*/
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    background: white;
-    border-bottom: 1px solid #eee;
+/* #################### Mobile First  #################### */
+/* ############ header ############ */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    
+    border-bottom:1px solid #eee;
+    background:#ffffff;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 
 .header__inner {
@@ -41,71 +52,137 @@
     color: #111;
 }
 
-.nav__list {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav__link {
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-}
-
-.btn {
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-.btn--primary {
-    background: rgb(33, 33, 33);
-    color: #eee;
-}
-
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-}
-
-/* ############################################################# */
-
-section{
-    padding: 100px 200px;
-}
-
-
-/* ############################################################# */
-@media (max-width: 768px) {
-
-    /* header */
-  .nav {
+.nav {
+    display: none;
     position: absolute;
     top: 70px;
     left: 0;
 
-    width: 100%;
+    width: 100%;    
+    border-top: 1px solid #eee;    
     background: white;
-    border-top: 1px solid #eee;
+}
 
-    display: none;
-  }
-
-  .nav__list {
+.nav__list {
+    display: flex;
     flex-direction: column;
     padding: 1rem;
-  }
+    list-style: none;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.nav__item {
+    padding-block: 1rem;
+}
 
-  .nav--open {
-  display: block;
+.nav__link {
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ############ Main ############ */
+
+section {
+    padding-block:80px;
+}
+
+/* ############ Footer ############ */
+
+.footer {
+    background-color: #123; 
+    padding-block:80px;
+    
+}
+
+.footer__content{
+    font-size: 1.25em;
+    color: #ffffff;
+}
+
+/* ############################################################# */
+/* #################### @media  #################### */
+
+/* #################### Tablet  #################### */
+@media (min-width:768px) {
+    /* ############ header ############ */
+   
+    /* ############ Main ############ */
+    
+    /* ############ Footer ############ */
+
+}
+
+/* #################### laptop  #################### */
+@media (min-width:1024px) {
+    /* ############ header ############ */
+    
+    /* ############ Main ############ */
+    
+    /* ############ Footer ############ */
+
+}
+
+/* #################### desktop  #################### */
+@media (min-width:1280px) {
+    /* ############ header ############ */
+    
+    /* ############ Main ############ */
+    
+    /* ############ Footer ############ */
+
+}
+
+/* #################### large desktop  #################### */
+@media (min-width:1536px) {
+    /* ############ header ############ */
+    
+    /* ############ Main ############ */
+    
+    /* ############ Footer ############ */
+
+}
+
+
+
+
+
+
+.menu-toggle{
+display:none;
+}
+
+/* mobile */
+
+@media (max-width:768px){
+
+.nav{
+display:none;
+
+position:absolute;
+top:70px;
+left:0;
+
+width:100%;
+background:white;
+border-top:1px solid #eee;
+}
+
+.nav__list{
+flex-direction:column;
+padding:1rem;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav--open{
+display:block;
 }
 
 }

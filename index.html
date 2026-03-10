@@ -20,100 +20,150 @@
 
 </head>
 <body>
+    <div class="site">
 
-<header class="header">
-    <div class="container">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="#" class="logo">HASSAN</a>
 
-        <div class="header__inner">
+                    <nav class="nav" aria-label="Main Navigation">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#home" class="nav__link">Home</a>
+                            </li>
 
-            <a href="#" class="logo">HASSAN</a>
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">Services</a>
+                            </li>
 
-            <nav class="nav" aria-label="Main Navigation">
-                <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#projects" class="nav__link">Projects</a>
+                            </li>
 
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
-                    </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Services</a>
-                    </li>
+                    <button class="menu-toggle" aria-label="Open Menu">
+                        ☰
+                    </button>
+                </div>
+            </div>
+        </header>
 
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link">Projects</a>
-                    </li>
+        <main>
 
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="hero__content">
+                            <h1>Frontend Developer</h1>
+                            <p>I build modern web interfaces.</p>
+                        </div>
 
-                </ul>
-            </nav>
+                        <div class="hero__image">
+                            <img src="hero.png">
+                        </div>
 
-            <div class="header__actions">
-                <a href="#" class="btn btn--primary">Hire Me</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="hero__content">
+                            <h1>Frontend Developer</h1>
+                            <p>I build modern web interfaces.</p>
+                        </div>
+
+                        <div class="hero__image">
+                            <img src="hero.png">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="hero__content">
+                            <h1>Frontend Developer</h1>
+                            <p>I build modern web interfaces.</p>
+                        </div>
+
+                        <div class="hero__image">
+                            <img src="hero.png">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="hero__content">
+                            <h1>Frontend Developer</h1>
+                            <p>I build modern web interfaces.</p>
+                        </div>
+
+                        <div class="hero__image">
+                            <img src="hero.png">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>        
+
+        </main>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__content">
+                        <p>© 2026 Hassan Hanboly. All rights reserved.</p>
+
+                        <div class="social_links">
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <button class="menu-toggle" aria-label="Open Menu">
-                ☰
-            </button>
+        </footer>
 
-        </div>
+
+        <script>
+            /* ######################################################### */     
+            const menuBtn = document.querySelector(".menu-toggle")
+            const nav = document.querySelector(".nav")
+            const navItems = document.querySelectorAll(".nav__item")
+            
+            // فتح و اغلاق القائمة
+            menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("nav--open")  })
+            
+            // اغلاق القائمة عند الضغط على أي عنصر
+            navItems.forEach(item => {
+            item.addEventListener("click", () => {
+            nav.classList.remove("nav--open") }) })
+            /* ######################################################### */ 
+        </script>
 
     </div>
-</header>
-
-<section>
-    <h1> hello</h1>
-
-</section>
-
-<section>
-    <h2>hello</h2>
-    
-</section>
-
-<section>
-    <h3>hello</h3>
-    
-</section>
-
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-<section>
-    <h3>hello</h3>
-    
-</section>
-
-    <script>
-        const menuBtn = document.querySelector(".menu-toggle")
-        const nav = document.querySelector(".nav")
-
-        menuBtn.addEventListener("click", () => {
-        nav.classList.toggle("nav--open")  })
-        
-    </script>
 </body>
 </html>
