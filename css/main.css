@@ -65,15 +65,15 @@ margin-left 2%:
 
 /* #################### General System  #################### */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
-.site{
+.site {
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
@@ -91,16 +91,15 @@ margin-left 2%:
 /* ############################################################# */
 /* ############################################################# */
 
-.header {
+.header { 
   height: 4.3rem;
   padding-top: 10px;
 }
 
-.header__inner {
+.header__inner { 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .logo {
@@ -110,7 +109,7 @@ margin-left 2%:
   text-decoration: none;  
 }
 
-/* #################### زر البرجر #################### */
+/* #################### Burger menu #################### */
 
 .nav-toggle {
   display: flex;
@@ -201,21 +200,21 @@ UI (State-based styling)
 /* ############ Animation احترافي للبرجر (يتحول X) ############ */
 
 .nav-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
+  transform: rotate(45deg) translateY(8px);
 }
 
 .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .nav-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
+  transform: rotate(-45deg) translateY(-8px);
 }
 /* ################## تغير لون زر الخروج  X ########################## */
 
 .nav-toggle.active .bar:nth-child(1),
 .nav-toggle.active .bar:nth-child(3) {
-    background: var(--color-bg);
+  background: var(--color-bg);
 }
 
 /* ############################################################# */
@@ -228,8 +227,8 @@ UI (State-based styling)
 /* ############################################################# */
 /* ############################################################# */
 
-main{
-    background-color: var(--color-bg);
+main {
+  background-color: var(--color-bg);
 }
 
 /* ############################################################# */
@@ -237,8 +236,8 @@ main{
 /* ############################################################# */
 
 footer {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 
@@ -248,17 +247,24 @@ footer {
 @media (min-width: 768px) {
  
   .nav {
-    position: static;
-    height: auto;
-    width: auto;
-    background: none;
-    padding: 0;
-    right: 0;
+  position: static;
+  height: auto;
+  width: auto;
+  background: none;
+  padding: 0;
+  right: 0;
   }
 
   .nav__list {
     flex-direction: row;
   }
+
+  .nav__link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
   .nav-toggle {
     display: none;
@@ -267,5 +273,6 @@ footer {
   .overlay {
     display: none;
   }
+
 }
 
