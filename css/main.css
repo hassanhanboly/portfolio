@@ -282,6 +282,13 @@ section {
   transform: scale(1.1);
 }
 
+.socail__icons a{
+  color: var(--color-primary);
+  font-size: 1.7em;
+  padding-right: 30px;
+  transition: 0.3s ease;
+}
+
 
 /* ############################################################# */
 .services { border: 2px solid var(--color-secondary);
@@ -328,6 +335,7 @@ section {
   font-weight: 600;
   color: var(--color-primary);
 }
+
 .card__text {
   font-size: var(--font-size-md);
   font-weight: 400;

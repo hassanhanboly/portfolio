@@ -72,6 +72,13 @@
                             <p class="hero__text">A passionate <span> web developer </span> creating modern and responsive websites.</p>
                             <a href="#projects" class="btn btn-primary">View My Work</a>                                           
 
+                            <div class="socail__icons">
+                                <a href="#"><i class="fa-brands fa-square-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -170,11 +177,10 @@
     
     </div>
 
+        <!-- Patterns -> State Class Pattern  -->
+        <!-- openMenu & closeMenu Logic -->
 
     <script>
-        /* Patterns --> State Class Pattern */
-        /* openMenu & closeMenu Logic */
-
         const toggle = document.querySelector(".nav-toggle");
         const nav = document.querySelector(".nav");
         const overlay = document.querySelector(".overlay");
@@ -194,8 +200,18 @@
             document.body.classList.remove("no-scroll");
         }
 
+        /* 
         toggle.addEventListener("click", () => {
             nav.classList.contains("active") ? closeMenu() : openMenu();
+         });
+        */
+
+
+        toggle.addEventListener("click", () => {
+            const isOpen = toggle.classList.toggle("active");
+            nav.classList.toggle("active", isOpen);
+            overlay.classList.toggle("active", isOpen);
+            document.body.classList.toggle("no-scroll", isOpen);
         });
 
         overlay.addEventListener("click", closeMenu);
