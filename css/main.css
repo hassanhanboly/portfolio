@@ -35,37 +35,42 @@ margin-left 2%:
 */
 
 :root {
-  /* Colors */
-  --color-primary: #0F172A;
-  --color-secondary: #3B82F6;
-  --color-bg: #ffffff;
-  --color-text: #1E293B;
-  --color-white: #ffffff;
-  --color-card: #bababa;
+  /* Colors 10-30-60 */
+  --color-primary: #09426F;
+  --color-secondary: #3B92B7;
+  --color-bg: #123;
+  --color-text: #fff;
+  --color-icons: #e2f0fa;
+  --color-card: rgb(42, 49, 55);
+  --color-overlay: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
 
   /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
+  --space-xxs: 0.125rem;  /* 2px */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 1.875rem;  /* 30px */
+  --space-xxl: 6.25rem;  /* 100px */
 
   /* Border Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.625rem; /* 10px */
+  --radius-lg: 1rem;     /* 16px */
 
   /* Typography */
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 20px;
-  --font-size-xl: 24px;
-  --font-size-xxl: 28px;
-  --font-size-xxxl: 32px;
-  --font-size-icon: 60px;
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.25rem;   /* 20px */
+  --font-size-xl: 1.5rem;    /* 24px */
+  --font-size-xxl: 1.75rem;  /* 28px */
+  --font-size-xxxl: 2rem;    /* 32px */
+  --font-size-icon: 3.75rem; /* 60px */
 
   /* Shadow */
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.8);
+  --shadow-blue: -1px 1px 12px var(--color-secondary); /* ظل خفيف */
 }
 
 /* #################### General System  #################### */
@@ -96,9 +101,11 @@ margin-left 2%:
 /* ############################################################# */
 /* ############################################################# */
 
-.header { 
+.header {
+  display: flex;
+  align-items: center;
   height: 4.3rem;
-  padding-top: 10px;
+  width: 100%;
 }
 
 .header__inner { 
@@ -110,7 +117,7 @@ margin-left 2%:
 .logo {
   font-size: var(--font-size-lg);
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration: none;  
 }
 
@@ -119,51 +126,53 @@ margin-left 2%:
 .nav-toggle {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
   z-index: 1001;
+  gap: var(--space-xs);
+  border: none;
+  background: none;
+  cursor: pointer;
+  
 }
 
 .bar {
-  width: 25px;
+  width: var(--space-lg);
   height: 3px;
-  background: var(--color-primary);
-  transition: 0.3s;
+  background: var(--color-text);
+  transition: 0.3s ease;
 }
 
 /* ###################### Nav ###################### */
 /* القائمة (مخفية افتراضيًا) */
 .nav {
+  z-index: 1000;
   position: fixed;
   top: 0;
   right: -100%;
   width: 70%;
   height: 100vh;
-  background: var(--color-primary);
   padding: 80px 20px;
+  background: var(--color-bg);
   transition: right 0.3s ease;
-  z-index: 1000;
+  
 }
 
 .nav__list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-lg);
   list-style: none;
 }
 
 .nav__link {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-text);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: var(--color-card);
+  color: var(--color-secondary);
 }
 
 /* ###################### overlay ###################### */
@@ -173,7 +182,7 @@ margin-left 2%:
   background: rgba(0,0,0,0.5);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 /* ############## الحالة المفتوحة (Active State) ############## */
@@ -219,7 +228,7 @@ UI (State-based styling)
 
 .nav-toggle.active .bar:nth-child(1),
 .nav-toggle.active .bar:nth-child(3) {
-  background: var(--color-bg);
+  background: var(--color-text);
 }
 
 /* ############################################################# */
@@ -232,33 +241,64 @@ UI (State-based styling)
 /* ############################################################# */
 /* ############################################################# */
 
-main {
-  border: 2px solid red; 
-}
-
 section {
   padding: 3rem 0;  /* top + bottom only: gap */
 }
 
 /* ############################################################# */
+.hero {
+  background: url(../assets/images/galaxy.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+}
 
-.hero__content {
+.hero__inner { 
+  display: flex;
+  align-items: center ;
+  justify-content: center ;
+  height: 70vh;
+}
+
+.hero__content { 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
-  text-align: center;
+
+  padding: var(--space-xl);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-lg);
+  gap: var(--space-sm);
+
+  background-color: var(--color-overlay);
+  box-shadow: var(--shadow-blue);
 }
+
+.hero__info {border: 2px solid rgb(72, 255, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-sm);
+  gap: var(--space-md);
+}
+
 
 .hero__title {
   font-size: var(--font-size-xl);
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .hero__text {
+  text-align: center;
   font-size: var(--font-size-md);
+  font-weight: 500;
   color: var(--color-text);
+  
+
 }
 
 .hero__text span {
@@ -268,31 +308,42 @@ section {
 }
 
 .btn.btn-primary {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
   padding: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-xl);
   border: none;
   border-radius: var(--radius-md);
+
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .btn.btn-primary:hover {
   transform: scale(1.1);
+  background-color: var(--color-primary);
+}
+
+.socail__icons { border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .socail__icons a{
-  color: var(--color-primary);
+  color: var(--color-icons);
   font-size: 1.7em;
-  padding-right: 30px;
   transition: 0.3s ease;
 }
 
 
 /* ############################################################# */
-.services { border: 2px solid var(--color-secondary);
-  
+.services { 
+  border: 2px solid var(--color-secondary);
 }
 
 .services__content {
@@ -311,13 +362,13 @@ section {
 
 /* ############################################################# */
 .card {
-  background-color: #f0f0f0;
+  background-color: var(--color-card);
   width: 21.25em;
   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
   border-radius: 10px;
   padding: 25px;
   margin: 15px;   
-  transition: 0.7s ease;
+  transition: transform 0.7s ease;
 }
 
 .card:hover {
@@ -325,7 +376,7 @@ section {
 }
 
 .card__icon {
-  color: var(--color-secondary);
+  color: var(--color-icons);
   font-size: var(--font-size-icon);
   text-align: center;
 }
@@ -333,7 +384,7 @@ section {
 .card__title {
   font-size: var(--font-size-xl);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .card__text {
